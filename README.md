@@ -37,10 +37,8 @@ This is designed as an end-to-end data engineering project.
 
 ## Architecture Overview
 
-```
 ![alt text](https://raw.githubusercontent.com/ShohaibKhan/OlistStreaming/main/aws_architecture.drawio.png)
 
-```
 
 ---
 
