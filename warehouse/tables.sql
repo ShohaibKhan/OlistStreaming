@@ -71,29 +71,29 @@ SORTKEY AUTO;
 
 
 COPY staging.orders
-FROM 's3://ecommercestream/processed/orders/purchase_date='
-IAM_ROLE 'arn:aws:iam::650251702489:role/RedshiftToS3'
+FROM 's3://S3BUCKET/processed/orders/purchase_date='
+IAM_ROLE 'arn:aws:iam::ACCOUNTID:role/S3ToRedshift'
 FORMAT AS PARQUET
 JOB CREATE auto_copy_orders
 AUTO ON;
 
 COPY staging.items
-FROM 's3://ecommercestream/processed/items/tems'
-IAM_ROLE 'arn:aws:iam::650251702489:role/RedshiftToS3'
+FROM 's3://S3BUCKET/processed/items/tems'
+IAM_ROLE 'arn:aws:iam::ACCOUNTID:role/S3ToRedshift'
 FORMAT AS PARQUET
 JOB CREATE auto_copy_items
 AUTO ON;
 
 COPY staging.payments
-FROM 's3://ecommercestream/processed/payments'
-IAM_ROLE 'arn:aws:iam::650251702489:role/RedshiftToS3'
+FROM 's3://S3BUCKET/processed/payments'
+IAM_ROLE 'arn:aws:iam::ACCOUNTID:role/S3ToRedshift'
 FORMAT AS PARQUET
 JOB CREATE auto_copy_payments
 AUTO ON;
 
 COPY staging.customers
-FROM 's3://ecommercestream/processed/customers'
-IAM_ROLE 'arn:aws:iam::650251702489:role/RedshiftToS3'
+FROM 's3://S3BUCKET/processed/customers'
+IAM_ROLE 'arn:aws:iam::ACCOUNTID:role/S3ToRedshift'
 FORMAT AS CSV
 IGNOREHEADER 1
 DELIMITER ','
@@ -101,8 +101,8 @@ JOB CREATE auto_copy_customers
 AUTO ON;
 
 COPY staging.products
-FROM 's3://ecommercestream/processed/products'
-IAM_ROLE 'arn:aws:iam::650251702489:role/RedshiftToS3'
+FROM 's3://S3BUCKET/processed/products'
+IAM_ROLE 'arn:aws:iam::ACCOUNTID:role/S3ToRedshift'
 FORMAT AS CSV
 IGNOREHEADER 1
 DELIMITER ','
