@@ -5,11 +5,11 @@ import boto3
 import pandas as pd
 
 REGION = "ap-south-1"
-STREAM = "ecommerce-stream"
+STREAM = "STREAMNAME"
 
-ORDERS = "/home/ec2-user/olist_streaming/kaggle/olist_data/olist_orders_dataset.csv"
-PAYMENTS = "/home/ec2-user/olist_streaming/kaggle/olist_data/olist_order_payments_dataset.csv"
-ITEMS = "/home/ec2-user/olist_streaming/kaggle/olist_data/olist_order_items_dataset.csv"
+ORDERS = "/kaggle/olist_data/olist_orders_dataset.csv"
+PAYMENTS = "/kaggle/olist_data/olist_order_payments_dataset.csv"
+ITEMS = "/kaggle/olist_data/olist_order_items_dataset.csv"
 
 MAX_EVENTS = 50000
 SLEEP = 0.02
