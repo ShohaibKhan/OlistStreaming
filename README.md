@@ -11,7 +11,8 @@ Instead of simply loading static CSV files into a warehouse, this pipeline:
 
 - Simulates real-time e-commerce events  
 - Processes them using Apache Spark  
-- Stores raw and processed data in Amazon S3  
+- Stores raw and processed data in Amazon S3
+- Enables real-time ad-hoc queries using Amazon Athena  
 - Automatically ingests data into Amazon Redshift  
 - Models the warehouse using a Star Schema  
 - Enables analytics-ready business queries  
@@ -78,6 +79,31 @@ Two logical layers:
 - Cleaned and structured Parquet files  
 - Partitioned by time  
 - Optimized for warehouse ingestion  
+
+---
+
+### AWS Glue Data Catalog
+
+All processed S3 tables are registered in AWS Glue.
+
+Glue provides:
+
+- Centralized metadata management  
+- Schema definitions  
+- Partition awareness  
+- Integration with Athena  
+
+---
+
+### Amazon Athena (Real-Time Ad-Hoc Queries)
+
+Athena allows querying processed S3 data directly using standard SQL.
+
+This enables:
+
+- Real-time monitoring  
+- Quick business exploration  
+- Serverless querying without infrastructure management  
 
 ---
 
