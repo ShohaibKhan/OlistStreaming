@@ -38,9 +38,7 @@ This is designed as an end-to-end data engineering project.
 ## Architecture Overview
 
 ```
-Producer → S3 (Raw) → Spark Streaming → S3 (Processed)
-           ↓
-        Redshift Staging → Star Schema → Analytics
+![alt text](https://github.com/ShohaibKhan/OlistStreaming/blob/main/aws_architecture.drawio.png?raw=true)
 ```
 
 ---
@@ -90,15 +88,7 @@ Staging tables mirror the processed S3 schema.
 
 Auto COPY jobs continuously ingest new data from S3 without manual execution:
 
-```sql
-COPY staging.orders
-FROM 's3://your-bucket/processed/orders/'
-IAM_ROLE 'arn:aws:iam::ACCOUNTID:role/S3ToRedshift'
-FORMAT AS PARQUET
-AUTO;
-```
-
-This simulates incremental production-style ingestion.
+This simulates incremental style ingestion.
 
 ---
 
