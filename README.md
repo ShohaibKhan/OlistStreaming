@@ -137,5 +137,3 @@ This project reflects a practical approach to building scalable data systems:
 - Clear separation of layers  
 - Incremental ingestion strategy  
 - Cloud-native architecture mindset  
-
-If you're reviewing this repository for collaboration or hiring, I’d be happy to walk through the design decisions behind each layer.
